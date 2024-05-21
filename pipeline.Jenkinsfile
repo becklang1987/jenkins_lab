@@ -1,4 +1,5 @@
 pipeline {
+    agent any
 environment {
 registry = "becklang1987/python_flask"
 registryCredential = 'mygmail'
@@ -17,6 +18,7 @@ dockerImage = ''
                     dockerImage = docker.build $registry + ":v1.0"
                 }
             }
+        }
         stage('Deploy our image') {
             steps{
                 script {
@@ -33,4 +35,3 @@ dockerImage = ''
         }
         }
     }
-}
