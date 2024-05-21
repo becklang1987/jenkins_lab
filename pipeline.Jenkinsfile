@@ -28,7 +28,7 @@ dockerImage = ''
     }
         stage('Cleaning up') {
             steps{
-                sh "docker rmi $registry+":v1.0""
+                sh "docker rmi $registry:v1.0"
             }
         }
         }
