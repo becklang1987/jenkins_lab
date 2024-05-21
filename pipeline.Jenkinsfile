@@ -15,7 +15,7 @@ dockerImage = ''
         stage('Docker_Build') {
             steps {
                 script {
-                    dockerImage = docker.build $registry + ":v1.0"
+                    dockerImage = docker.build registry + ":v1.0"
                 }
             }
         }
