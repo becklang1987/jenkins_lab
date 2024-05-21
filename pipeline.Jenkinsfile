@@ -8,7 +8,7 @@ dockerImage = ''
     stages {
         stage('Pull Code') {
             steps {
-                git 'https://github.com/becklang1987/jenkins_lab.git'
+                git branch: 'main', url: 'https://github.com/becklang1987/jenkins_lab.git'
                 echo "Running Code Pulling from Github"
             }
             }
